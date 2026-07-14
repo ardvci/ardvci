@@ -24,8 +24,7 @@ I measure before I touch anything. Then I usually find out I was wrong about whe
  
 - [Streaming JSON parsing](https://qiita.com/ardvci/items/8f4e587de7343f01ba2f) — why the naive approach falls apart at scale
 - [Ballista on Kubernetes](https://medium.com/@ardvci/rusty-distributed-computation-ballista-more-than-a-query-engine-45387078704b) — distributed query execution with DataFusion
-I write in English and Japanese. Mostly on Qiita.
- 
+- I write in English and Japanese. Mostly on [Qiita](https://qiita.com/ardvci) & [Medium](https://medium.com/@ardvci).
 ---
  
 ### 🧰 Tools
