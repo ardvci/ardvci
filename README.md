@@ -19,9 +19,9 @@ I measure before I touch anything. Then I usually find out I was wrong about whe
  
 ### Latest Writing
  
-**Custom Data Sources in Ballista** — Serving Apache Arrow streams over HTTP via Axum into distributed query engines ([Qiita](https://qiita.com/ardvci/items/274d400302154e595610) · [Zenn](https://zenn.dev/ardvci/articles/cb9c87f59c4a9a))
-**Streaming JSON Parsing** — Why the naive NDJSON parsing approach falls apart at scale and how to keep memory under 2MiB ([Qiita](https://qiita.com/ardvci/items/8f4e587de7343f01ba2f))
-**Ballista on Kubernetes** — Distributed query execution with DataFusion ([Medium](https://medium.com/@ardvci/rusty-distributed-computation-ballista-more-than-a-query-engine-45387078704b))
+* **Custom Data Sources in Ballista** — Serving Apache Arrow streams over HTTP via Axum into distributed query engines ([Qiita](https://qiita.com/ardvci/items/274d400302154e595610) · [Zenn](https://zenn.dev/ardvci/articles/cb9c87f59c4a9a))
+* **Streaming JSON Parsing** — Why the naive NDJSON parsing approach falls apart at scale and how to keep memory under 2MiB ([Qiita](https://qiita.com/ardvci/items/8f4e587de7343f01ba2f))
+* **Ballista on Kubernetes** — Distributed query execution with DataFusion ([Medium](https://medium.com/@ardvci/rusty-distributed-computation-ballista-more-than-a-query-engine-45387078704b))
 
 ---
  
