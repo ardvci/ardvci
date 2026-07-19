@@ -8,26 +8,24 @@ I measure before I touch anything. Then I usually find out I was wrong about whe
  
 ---
  
-### Focus areas
+### What I build & break
  
-**Arrow, all the way down.** Columnar memory is the thing that makes everything else possible — once data is in Arrow, it stops paying serialization tax every time it crosses a boundary. I work on top of that: DataFusion (custom sources, how pushdown propagates into the scan, where partitioning gets decided), Ballista (plan serialization, distributed execution), Arrow IPC and zero-copy reads.
- 
-**Streaming & data movement.** Kafka ingestion, backpressure, bounded memory under load. Rust with Tokio — chunked parallel workers, channels bridging blocking I/O with async tasks.
- 
-**Distributed systems on Kubernetes.** Airflow across 10+ nodes, Ballista via Helm, Spark for the heavy batch stuff. Skew, shuffle, resource sizing, and the specific way things break at 3am.
- 
-**Vector search & embeddings.** Mapped 4M+ records across providers with embeddings and Qdrant. This is where the data infra work starts touching ML directly, and it's the direction I keep gravitating toward.
- 
+* **Arrow, all the way down:** Building high-throughput data layers natively in Rust. Deep diving into DataFusion (custom `TableProvider` implementations, pushdowns, partitioning) and Ballista (distributed execution, plan serialization via gRPC, custom extension codecs).
+* **Streaming & Data Movement:** Writing memory-efficient Kafka consumers with `rdkafka` and `async-stream`, balancing backpressure, and handling chunked parallel workers using Tokio.
+* **Distributed Infrastructures:** Deploying distributed query engines on Kubernetes via Helm, orchestration with Airflow across multi-node clusters, and handling the specific ways things break at 3 AM.
+* **Vector Data Infra:** Scaled vector pipelines to process 4M+ records with embeddings and Qdrant. 
+
 ---
  
-### Writing
+### Latest Writing
  
-- [Streaming JSON parsing](https://qiita.com/ardvci/items/8f4e587de7343f01ba2f) — why the naive approach falls apart at scale
-- [Ballista on Kubernetes](https://medium.com/@ardvci/rusty-distributed-computation-ballista-more-than-a-query-engine-45387078704b) — distributed query execution with DataFusion
-- I write in English and Japanese. Mostly on [Qiita](https://qiita.com/ardvci) & [Medium](https://medium.com/@ardvci).
+**Custom Data Sources in Ballista** — Serving Apache Arrow streams over HTTP via Axum into distributed query engines ([Qiita](https://qiita.com/ardvci/items/274d400302154e595610) · [Zenn](https://zenn.dev/ardvci/articles/cb9c87f59c4a9a))
+**Streaming JSON Parsing** — Why the naive NDJSON parsing approach falls apart at scale and how to keep memory under 2MiB ([Qiita](https://qiita.com/ardvci/items/8f4e587de7343f01ba2f))
+**Ballista on Kubernetes** — Distributed query execution with DataFusion ([Medium](https://medium.com/@ardvci/rusty-distributed-computation-ballista-more-than-a-query-engine-45387078704b))
+
 ---
  
-### 🧰 Tools
+### Tech Stack
  
-`Rust` (Tokio · Arrow · DataFusion · Ballista) · `Python` · `Scala/Spark` · `SQL`
-`Kafka` · `Airflow` · `Kubernetes` · `GCP` · `AWS` · `BigQuery` · `Qdrant`
+* **Systems & Data:** Rust (Tokio · Arrow · DataFusion · Ballista) · Python · Scala/Spark · SQL
+* **Infra & Ops:** Kafka · Airflow · Kubernetes · GCP · AWS · Qdrant
